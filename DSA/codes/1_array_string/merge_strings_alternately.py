@@ -1,11 +1,11 @@
 """
-This function merge two strings by adding letters in alternating order.
+Problem: Merge two strings by adding letters in alternating order.
 If a string is longer than the other, append the additional letters
 onto the end of the merged string.
 """
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        merge = " "
+        merge = ""
         len1, len2 = len(word1), len(word2)
         min_range = min(len1,len2)
         for i in range(min_range):
@@ -15,7 +15,6 @@ class Solution:
             merge += word1[min_range:]
         else:
             merge += word2[min_range:]
-        return merge
 #Example
 s = Solution()
 word1 = "Joy"
